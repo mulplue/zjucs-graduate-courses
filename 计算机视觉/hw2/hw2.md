@@ -78,7 +78,7 @@ python main.py
 
 - 结果
 
-  <img src="examples/1.jpg" alt="1" style="zoom:15%;" /><img src="results/2_recon.jpg" alt="2_recon" style="zoom:50%;" />
+  <img src="examples/1.jpg" alt="1" style="zoom:15%;" /><img src="results/1_recon.jpg" alt="2_recon" style="zoom:50%;" />
 
   <img src="examples/2.jpg" alt="2" style="zoom:10%;" /><img src="results/2_recon.jpg" alt="3_recon" style="zoom:50%;" />
 
