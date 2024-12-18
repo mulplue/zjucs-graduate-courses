@@ -106,10 +106,10 @@ class Animator():
         edge = cv2.Canny(gray, 50, 60)
         colored_edge = cv2.bitwise_and(image, image, mask=edge)
         if save:
-            cv2.imwrite(f'./output/{prefix}_blurred.png', blurred)
-            cv2.imwrite(f'./output/{prefix}_gray.png', gray)
-            cv2.imwrite(f'./output/{prefix}_canny_edge.png', edge)
-            cv2.imwrite(f'./output/{prefix}_colored_edge.png', colored_edge)
+            cv2.imwrite(f'./results/{prefix}_blurred.png', blurred)
+            cv2.imwrite(f'./results/{prefix}_gray.png', gray)
+            cv2.imwrite(f'./results/{prefix}_canny_edge.png', edge)
+            cv2.imwrite(f'./results/{prefix}_colored_edge.png', colored_edge)
         return [blurred, gray, edge, colored_edge]
 
 

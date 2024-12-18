@@ -114,6 +114,6 @@ if __name__ == '__main__':
     x.train(p=1)
     """ Reconstruct """
     for i in range(1, 4):
-        img_path = f'./example/{i}.jpg'
+        img_path = f'./examples/{i}.jpg'
         x.reconstruct(img_path,
                       nums_pc=[10, 25, 50, 75, 100, 200, 300, 400, 500, 600])
