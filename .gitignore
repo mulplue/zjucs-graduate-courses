@@ -1,3 +1,5 @@
-results/
+*.pyc
+**/.DS_Store
 
+results/
 计算机视觉/hw2/data

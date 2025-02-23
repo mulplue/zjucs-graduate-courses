@@ -32,7 +32,7 @@ python main.py
 ```python
 ## show image and text
 cv2.imshow(name, image)		# image
-cv2.putText(image, text, position, font, scale, 
+cv2.putText(image, text, position, font, scale,
             color, thickness, line_type)		# text
 
 ## create and release video
@@ -89,7 +89,7 @@ class Animator():
 
     def reset(self):
         self.curr_frame = np.zeros([self.size[1], self.size[0], 3], np.uint8)
-        self.show_image(0.1) 
+        self.show_image(0.1)
 
     def show_image(self, seconds, image_path=None):
         if image_path:
@@ -106,7 +106,7 @@ class Animator():
         return image
 
     def show_text(self, seconds, text, position, color, scale=1, thickness=2, font = cv2.FONT_HERSHEY_SIMPLEX, line_type=cv2.LINE_AA):
-        cv2.putText(self.curr_frame, text, position, font, 
+        cv2.putText(self.curr_frame, text, position, font,
                    scale, self.colors[color][::-1], thickness, line_type)
         self.show_image(seconds)
 
@@ -125,9 +125,9 @@ class Animator():
                 if self.render:
                     cv2.imshow(self.name, self.curr_frame)
                     self.space_pause()
-        
+
         # cv2.fillPoly(self.curr_frame, [np.concatenate(contours)], self.miku_color)
-    
+
     def draw_roxy(self, roxy_path, width=350):
         roxy = cv2.imread(roxy_path)
         scaled_height = int(width / roxy.shape[1] * roxy.shape[0])
@@ -170,4 +170,3 @@ class Animator():
         return [blurred, gray, edge, colored_edge]
 
 ```
-

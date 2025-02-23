@@ -37,7 +37,7 @@ python main.py
 
 - <img src="examples/1.jpg" alt="1" style="zoom: 25%;" /><img src=examples/2.jpg alt="2" style="zoom:15%;" />
 
-  
+
 
 ### 训练
 
@@ -65,16 +65,16 @@ python main.py
   ```python
   vec = (torch.tensor(self.img2vec(img)).cuda() -
              self.avg_vec).unsqueeze(0)  # [1, h*w]
-  
+
   v_k = self.v[:, :k]
   vec_encode = torch.einsum('mn,nk -> mk', vec, v_k)
   vec_decode = torch.einsum('mk,kn -> mn', vec_encode, v_k.T)
-  
+
   img_recon = (vec_decode + self.avg_vec).cpu().numpy().reshape(
   self.img_shape)
   ```
 
-  
+
 
 - 结果
 
